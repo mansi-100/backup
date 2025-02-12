@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>wc</h3>
+    <label for="t1">t1</label>
+    <input type="text" name="t1" id="t1"><br><br>
+
+    <label for="t2">t2</label>
+    <input type="text" name="t2" id="t2"><br><br>
+
+    <label for="t3">t3</label>
+    <input type="text" name="t3" id="t3"><br><br>
+    
+    <label for="ans">ans</label>
+    <input type="text" id="ans" name="ans" disabled>
+    
+    <input type="submit" id="cal" value="calculate">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+        $(document).ready(function() {
+            $("#cal").click(function (){
+            // alert("wc");
+            
+            var v1=parseInt(document.getElementById("t1").value);
+            var v2=parseInt(document.getElementById("t2").value);
+            var v3=document.getElementById("t3").value;
+
+        document.getElementById("ans").value=`${v1+v2} | ${v3}  | ${v1+v2}${v3}` ;
+
+        })
+    
+    })
+    
+
+</script> 
+</body>
+</html>

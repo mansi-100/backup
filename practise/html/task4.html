@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task4</title>
+</head>
+<style>
+    .container{
+        border: 2px solid black;
+        display: block;
+        /* justify-content: center; */
+        /* align-items: center; */
+        margin-top: 70px;
+        text-align: center;
+        width: auto;
+        /* margin-left: 20px; */
+    }
+    .container2{
+        border: 2px solid black;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;;
+        width: 500px;
+        padding: 20px;
+
+    }
+    body{
+        text-align: center;
+        display: flex;    
+        justify-content: center;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div class="container2">
+            <h3>Allow only if image</h3>
+            <hr>
+            Select Image : <input type="file" id="fileInput" accept="image/*" required><br><br>
+            <!-- //for pdf .pdf  
+excel=  Select Image : <input type="file" accept=".xls,.xlsx"><br><br>
+ -->
+            <input type="button" id="submit" value="Upload">
+            <div id="msg"></div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+       document.getElementById("fileInput").addEventListener("change",function(){
+            let file=this.files[0];
+            console.log(file.type);
+            if(!file.type.startsWith("image/")){
+                $("#msg").text("Please Enter image only");
+            }
+            else{
+                $("#msg").text("Thanks");
+            }
+            // console.log(file.type);
+       })
+      
+    </script>
+</body>
+</html>

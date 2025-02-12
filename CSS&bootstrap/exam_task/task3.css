@@ -1,0 +1,56 @@
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa; 
+        }
+        .container3{
+            width: 100%;
+        }
+        .header {
+            background-color: #007bff; 
+            color: white;
+            padding: 20px 0;
+        }
+        img{
+            height: 2%;
+            background-position: center;
+            width: 100%;
+        }
+        .welcome-section {
+            background-color: #3cc4b2; 
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .features {
+            padding: 40px 0;
+        }
+        .feature-icon {
+            font-size: 50px;
+            color: #007bff;
+        }
+        
+        .bg1{
+            background-color:teal;
+            color: white;
+            padding: 5px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        .a1{
+            color: blue;
+        }
+        .hero-icon {
+        font-size: 60px; 
+        color: white; 
+    }
+    .icon_color{
+        color: black;
+    }
+    blockquote{
+        background-image: url('https://th.bing.com/th/id/R.4d04b168470c8b350286be46cf575b62?rik=Y4qohaSHIq9D0g&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f3%2f2%2f0%2f1104298-widescreen-natural-hd-wallpapers-2560x1920-samsung.jpg&ehk=eZbIYtL%2f64NQuKh2kyugI%2fCzuf2V2XMtgl4HU8QGmow%3d&risl=&pid=ImgRaw&r=0');
+        padding: 20px;
+        color: white;
+    }

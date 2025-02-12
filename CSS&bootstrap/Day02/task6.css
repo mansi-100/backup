@@ -1,0 +1,8 @@
+    .container{
+        border: 1px solid rgb(209, 206, 206);
+    }
+    .colstyle1{
+        background-color: rgb(255, 227, 233);
+        padding: 20px;
+        border: 1px solid rgb(185, 182, 182);
+    }

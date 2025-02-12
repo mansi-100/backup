@@ -1,0 +1,43 @@
+
+    body {
+    background-color: #6c757d;
+  }
+  .register-form {
+    max-width: 600px;
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+  }
+  .form-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .form-subtitle {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  .form-footer {
+    font-size: 0.9rem;
+  }
+  .form-footer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  .form-footer a:hover {
+    text-decoration: underline;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;  
+  }
+  .text-muted {
+  color: #d2d7db !important; /* Ensures the text color is light gray */
+}
+
+  a{
+    color: green;
+  }
+  .title{
+    color: #717274;
+  }

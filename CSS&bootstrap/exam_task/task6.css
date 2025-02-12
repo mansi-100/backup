@@ -1,0 +1,32 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; 
+}
+    nav{
+        display: flex;
+        background-color: #2e9c8e; /* Welcome section color */
+        color: white;
+        margin-bottom: 35px;
+
+    }
+    .icon {
+            font-size: 50px; /* Adjust size as needed */
+        }
+    a{
+        margin: 20px;
+        color: white;
+        text-decoration: none;
+    }
+    a:hover{
+        background-color:white;
+        padding: 10px;
+    }
+    .container3{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .container4{
+        text-align: center;
+        margin-top: 40px;
+    }

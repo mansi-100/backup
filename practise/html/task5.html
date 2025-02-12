@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5 </title>
+</head>
+<style>
+    .container{
+        display: block;
+    }
+    body{
+        display: flex;
+        /* text-align: center; */
+        justify-content: center;
+    }
+    .container2{
+        display: block;
+        border: 2px solid black;
+        padding: 20px;
+    }
+    .main{
+        display: flex;
+    }
+    .container3{
+        margin-top: 30px;
+        padding: 40px;
+    }
+    
+</style>
+<body>
+    <div class="main">
+        
+        <div class="container">
+            <h2>Two Submit Buttons with Different Action</h2>
+            <hr>
+            <div class="container2">
+                <h2>Submit form</h2>
+                <br>
+                <label for="fname">Firstname</label><br>
+                <input type="text" id="fname">
+                <br><br>
+                <button type="submit" id="bt1" value="btn1" onclick="fun('btn1')">btn1</button>
+                <button type="submit" id="bt2" value="btn2" onclick="fun('btn2')">btn2</button>
+
+            </div>
+            
+        </div>
+        <div class="container3">
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Submitted via</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        function fun(data){
+            let d=$("#fname").val();
+            let t1=`<tr>
+                    <td>${d}</td>
+                    <td>${data}</td>
+                   
+                </tr>`;
+            $("#data").append(t1);    
+            
+        }
+    </script>
+</body>
+</html>

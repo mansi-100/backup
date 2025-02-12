@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="task6.css">
+
+</head>
+
+<body>
+    <h2 class="text-center">Bootstrap Grid</h2>
+
+    <div class="container">
+
+        <div class="first-row">
+            <h6>4 columns (12/4=3)</h6>
+            <div class="row border  text-start">
+                <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                    <div class="colstyle1">col-3</div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                    <div class="colstyle1">col-3</div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                    <div class="colstyle1">col-3</div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                    <div class="colstyle1">col-3</div>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="second-row">
+            <h6>3 columns (12/3=4)</h6>
+            <div class="row border text-start">
+                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
+                    <div class="colstyle1">col-4</div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
+                    <div class="colstyle1">col-4</div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
+                    <div class="colstyle1">col-4</div>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="third-row">
+            <h6>2 columns (12/6=2)</h6>
+            <div class="row border text-start">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="colstyle1">col-6</div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="colstyle1">col-6</div>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="four-row">
+            <h6>1 column (12/1=12)</h6>
+            <div class="row border  text-start">
+                <div class="col-12">
+                    <div class="colstyle1">col-12</div>
+                </div>
+            </div>
+        </div><br><br>
+
+        <h2 class="text-center">Modal</h2>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+           Click To Open
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Welcome</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        This is a demo of the modal.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="task3.css">
+    </head>
+    
+    <body>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#employeeModal">
+        Open Employee Form
+    </button>
+
+    <div class="modal fade" id="employeeModal" tabindex="-1" aria-labelledby="employeeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title " id="employeeModalLabel">EMPLOYEE FORM</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                    <label for="validationServer01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationServer01" placeholder="First Name" pattern="^[A-Za-z]+$" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please enter a valid first name (alphabetic characters only).</div>
+                </div>
+                
+                <div class="col-md-6">
+                <label for="validationServer02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationServer02" placeholder="Last Name"  pattern="^[A-Za-z]+$"  required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter a valid last name.</div>
+                </div>
+                <div class="col-md-4">
+                <label for="validationServer04" class="form-label">Gender</label>
+                <select class="form-select" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option value="Male" name="male">Male</option>
+                    <option value="Female" name="female">Female</option>
+                </select>
+                <div id="validationServer04Feedback" class="invalid-feedback">Please select a gender.</div>
+                </div>
+                <div class="col-md-4">
+                <label for="validationServer02" class="form-label">Email</label>
+                <input type="email" class="form-control" id="validationServer02" placeholder="Email" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="col-md-4">
+                <label for="validationServer02" class="form-label">Mobile Number</label>
+                <input type="tel" class="form-control" id="validationServer02" placeholder="Phone" pattern="[0-9]{10}" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter a valid mobile number.</div>
+                </div>
+
+                <div class="col-md-12">
+                
+                <label class="form-label">Mandatory Skills</label>
+                <div class="row">
+                    <div class="col-auto">
+
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+                            <label class="form-check-label text-success" for="validationFormCheck2">HTML 5</label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+                            <label class="form-check-label text-success" for="validationFormCheck3">Javascript</label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="validationFormCheck4" name="radio-stacked" required>
+                            <label class="form-check-label text-success" for="validationFormCheck4">C# Programming</label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="validationFormCheck5" name="radio-stacked" required>
+                            <label class="form-check-label text-success" for="validationFormCheck5">ASP .NET</label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="validationFormCheck6" name="radio-stacked" required>
+                            <label class="form-check-label text-success" for="validationFormCheck6">ASP .NET MVC</label>
+                        </div>
+                    </div>
+            
+                    <div class="invalid-feedback">Please select a skill.</div>
+                    </div>
+        
+                </div>
+                
+                <div class="mb-3">
+                    <label for="profilePicture" class="form-label">Profile Picture</label>
+                    <div class="input-group">
+                      <input type="text" id="fileName" class="form-control" placeholder="No file chosen" readonly>
+                      <input type="file" id="profilePicture" class="form-control d-none" accept="image/*" required onchange="updateFileName()">
+                      <label for="profilePicture" class="btn btn-secondary">Browse</label>
+                    </div>
+                    <div class="invalid-feedback">Please upload a valid image file.</div>
+                  </div>
+
+                <div class="mb-3">
+                <label for="validationTextarea" class="form-label">Address</label>
+                <textarea class="form-control" id="validationTextarea" placeholder="Message" required></textarea>
+                <div class="invalid-feedback">Please enter a message in the textarea.</div>
+                </div>
+
+                <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+                    <label class="form-check-label text-success" for="invalidCheck3">Agree to terms and conditions</label>
+                    <div id="invalidCheck3Feedback" class="invalid-feedback">You must agree before submitting.</div>
+                </div>
+                </div>
+
+                <div class="col-12 d-flex justify-content-end gam-2">
+                <button class="btn btn-danger" type="reset">Cancel</button>
+                <button class="btn btn-primary" type="submit">Register</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function updateFileName() {
+      var input = document.getElementById('profilePicture');
+      var fileName = document.getElementById('fileName');
+      fileName.value = input.files[0].name;
+    }
+        const formElements = document.querySelectorAll('.needs-validation input, .needs-validation select, .needs-validation textarea, .needs-validation file');
+
+        formElements.forEach(element => {
+        element.addEventListener('blur', function() {
+            if (element.checkValidity()) {
+            element.classList.remove('is-invalid');
+            element.classList.add('is-valid');
+            } else {
+            element.classList.remove('is-valid');
+            element.classList.add('is-invalid');
+            }
+        });
+        });
+
+        (() => {
+        'use strict'
+
+        const forms = document.querySelectorAll('.needs-validation')
+
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+            }, false)
+        })
+        })()
+    </script>
+    </body>
+    </html>

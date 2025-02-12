@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>file2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<style>
+    .container{
+        border: 2px solid black;
+        display: block;
+        text-align: center;
+        width: auto;
+        height: 100%;
+        padding: 20px;
+        margin: 20px;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        /* text-align: center; */
+    }
+    input{
+        font-size: 20px;
+        margin: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required><br>
+
+            <input type="submit" value="Submit">
+        </form> 
+    </div>
+    <script>
+        $(document).ready(function(){
+            
+            $("#name").blur(function(){
+                // alert("Submit button is blurred");
+                $("#name").css("border","2px solid red");
+            })
+
+            $("#name").focus(function(){
+                $("#name").css("border","2px solid black");
+
+                // alert("Submit button is focused");
+            })
+
+            $("#email").blur(function(){
+                // alert("Submit button is blurred");
+            })
+
+            $("#email").focus(function(){
+                // alert("Submit button is focused");
+            })
+
+            $("form").submit(function(){
+                
+                alert("Submitted");
+            })
+        })   
+    </script>
+</body>
+</html>

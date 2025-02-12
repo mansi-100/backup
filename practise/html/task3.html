@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+</head>
+<style>
+    body{
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+    }
+    .container{
+        display: block;
+        background-color: white;
+        height: 650px;
+        width: 90%;
+        margin-top: 5%;
+    }
+    .container2{
+        background-color: black;
+        width: 100%;
+        padding-top: 20px;
+        color: white;
+        text-align: end;
+        /* text-indent: 20px; */
+        font-size: 50px;
+    }
+    table{
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    tr,td{
+        border:2px solid gray;
+        padding: 20px;
+        
+    }
+    .style1{
+        background-color: rgb(235, 225, 225);
+    }
+    .style2{
+        background-color: orangered;
+    }
+    button{
+       all:unset;
+       width: 100%;
+    }
+    /* <!--not workng--> */
+</style>
+<body>
+    <div class="container">
+            <div class="container2" id="display">
+                0 &nbsp;
+            </div>
+        <table>
+            <tr class="style1">
+                <td><button onclick="operator1('+')">+</button></td>
+                <td><button onclick="operator1('-')">-</button></td>
+                <td><button onclick="operator1('*')">X</button></td>
+                <td><button onclick="operator1('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="data('7')">7</button></td>
+                <td><button onclick="data('8')">8</button></td>
+                <td><button onclick="data('9')">9</button></td>
+                <td rowspan="4" class="style2"><button onclick="eqq()">=</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="data('4')">4</button></td>
+                <td><button onclick="data('5')">5</button></td>
+                <td><button onclick="data('6')">6</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="data('1')">1</button></td>
+                <td><button onclick="data('2')">2</button></td>
+                <td><button onclick="data('3')">3</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="data('0')">0</button></td>
+                <td><button onclick="operator1('.')">.</button></td>
+                <td><button onclick="operator1('AC')">AC</button></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Include jQuery (CDN) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        let fix=""; //globla val for fetch data of screen
+        let v=""; //v is for operator
+        function data(val){
+            event.preventDefault();
+            let d=$("#display").text().trim();
+            // console.log(d);
+            // $("#display").text(val);
+            if(d=="0"){
+                $("#display").text(val);
+
+            }
+            else if(d=="NAN" || d=="Infinity"){
+                $("#display").text(0);
+            }
+            else{
+                $("#display").text(d+val);
+                const dd=$("#display").text();
+                console.log("final val",dd);
+                fix = $("#display").text(); 
+                // console.log("mfix is ",fix);
+            }
+            
+            
+            
+        }
+        function operator1(op){
+            let p=$("#display").text();//42
+            let p2=$("#display").text(p+op);//42+
+            if(p==op){
+                let p2=$("#display").text(p+op);//42+
+                console.log(p2);
+
+            }
+            // if(op==)
+            switch(op){
+                case "AC":
+                    $("#display").text("0");
+                    fix="";
+                    v="";
+                    break;
+                case "+":
+                    v="+";
+                    let d1=$("#display").text();
+                    // let d2=
+                    console.log("+ val is ",d1); //22+
+                    break;
+                case "-":
+                    v="-";
+                    // alert("- case");
+                    // let d2=$("#display").text();
+                    // console.log("- val is ",d2);
+                    break;
+                case "*":
+                    v="*";
+                    break;
+                case "/":
+                    v="/";
+                    break;
+                
+            }
+        }
+        function eqq(){
+            // event.preventDefault();
+            if(v=="+"){
+                let finald=$("#display").text();
+                console.log(finald);
+
+                // // console.log(d);
+                let data1=fix.split("+");
+                let n1=parseFloat(data1[0]);
+                let n2=parseFloat(data1[1]);
+                console.log("n2  is",n2);
+                let n3=n1+n2;    
+                            
+
+                $("#display").text(n3);
+                console.log("n3 isss ",n3);
+
+            }
+            else if(v=="-"){
+                // let finald=$("#display").text();
+                console.log("fix is ",fix);
+                // alert("-");
+                let data1=fix.split("-");
+                let n1=parseFloat(data1[0]);
+                let n2=parseFloat(data1[1]);
+                let n3=n1-n2;
+                console.log("data1 ",data1);
+                // console.log("n2 is ",n2);
+
+
+                $("#display").text(n3);
+                console.log("n3 is2 ",n3);
+            }
+            else if(v=="*"){
+                let data1=fix.split("*");
+                let n1=parseFloat(data1[0]);
+                let n2=parseFloat(data1[1]);
+                let n3=n1*n2;
+                $("#display").text(n3);
+                console.log("n3 is2 ",n3);
+                // console.log("data1 ",data1);
+            }
+            else if(v=="/"){
+                let data1=fix.split("/");
+                let n1=parseFloat(data1[0]);
+                let n2=parseFloat(data1[1]);
+                let n3=n1/n2;
+                $("#display").text(n3);
+                console.log("n3 is2 ",n3);
+                // console.log("data1 ",data1);
+            }
+
+            // else{
+            //     let finald=$("#display").text();
+            //     console.log(finald);
+            // }
+            // else if(v=="-"){
+            //     if(v=="-"){
+            //     let d=$("#display").text();
+            //     // console.log(d);
+            //     let data1=d.split("-");
+            //     let n1=parseFloat(data1[0]);
+            //     let n2=parseFloat(data1[1]);
+            //     console.log(n1);
+            //     console.log(n2);
+
+            //     let n3=n1-n2;                
+
+            //     $("#display").text(n3);
+            //     // console.log(data1[1]);
+
+            // }
+            }
+            // let c=$("#display").text();
+            // console.log(c);
+
+        // }
+       
+        //logic not proper
+    </script>
+</body>
+</html>

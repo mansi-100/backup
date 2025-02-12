@@ -1,0 +1,28 @@
+
+     .container{
+        border: 1px solid rgb(209, 206, 206);
+    }
+    .colstyle1{
+        background-color: lightblue;
+        padding: 20px;
+        border: 1px solid rgb(185, 182, 182);
+    }
+    .colstyle2{
+        background-color: rgb(194, 191, 191);
+        padding: 20px;
+        border: 1px solid rgb(185, 182, 182);
+    }
+    @media (max-width: 768px) {
+        .colstyle1,
+        .colstyle2 {
+          background-color: #007bff; /* Same blue color for both styles */
+        }
+      }
+      
+      /* Media query for even smaller screens (up to 576px) */
+      @media (max-width: 576px) {
+        .colstyle1,
+        .colstyle2 {
+          background-color: #007bff; /* Same blue color for both styles */
+        }
+      }
